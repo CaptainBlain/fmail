@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+        <array key="Roboto-Light.ttf">
+            <string>Roboto-Light</string>
+        </array>
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="90" id="KGk-i7-Jjw" customClass="PostTableViewCell" customModule="FMail" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w3j-sc-XnN">
+                        <rect key="frame" x="12" y="12" width="272" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="sgK-gy-vRB"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vne-ky-nHF">
+                        <rect key="frame" x="288" y="4" width="28" height="28"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="28" id="UVU-LJ-ycE"/>
+                            <constraint firstAttribute="height" constant="28" id="tRN-GK-XeL"/>
+                        </constraints>
+                        <connections>
+                            <action selector="didPressPostButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="tnm-nO-jfa"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nmC-P3-7ti">
+                        <rect key="frame" x="12" y="58" width="272" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="beC-2J-C6I"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto Light" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kta-rc-p3u">
+                        <rect key="frame" x="12" y="36" width="272" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="0CQ-tY-z1P"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="vne-ky-nHF" firstAttribute="leading" secondItem="w3j-sc-XnN" secondAttribute="trailing" constant="4" id="32O-6N-llg"/>
+                    <constraint firstItem="w3j-sc-XnN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="65P-vs-oAi"/>
+                    <constraint firstItem="w3j-sc-XnN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="6vo-lm-P6D"/>
+                    <constraint firstItem="vne-ky-nHF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="J6f-i1-iSV"/>
+                    <constraint firstItem="Kta-rc-p3u" firstAttribute="top" secondItem="w3j-sc-XnN" secondAttribute="bottom" constant="4" id="Upp-iw-RxL"/>
+                    <constraint firstItem="nmC-P3-7ti" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="erQ-tE-i1p"/>
+                    <constraint firstItem="nmC-P3-7ti" firstAttribute="top" secondItem="Kta-rc-p3u" secondAttribute="bottom" constant="4" id="i3w-Gj-Vqr"/>
+                    <constraint firstItem="Kta-rc-p3u" firstAttribute="width" secondItem="w3j-sc-XnN" secondAttribute="width" id="lEq-Bh-up9"/>
+                    <constraint firstAttribute="trailing" secondItem="vne-ky-nHF" secondAttribute="trailing" constant="4" id="oxr-Ew-5Y7"/>
+                    <constraint firstItem="nmC-P3-7ti" firstAttribute="width" secondItem="w3j-sc-XnN" secondAttribute="width" id="t42-UB-XNa"/>
+                    <constraint firstItem="Kta-rc-p3u" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="tZT-mM-oop"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="postButton" destination="vne-ky-nHF" id="1yE-nF-eyR"/>
+                <outlet property="postContentLabel" destination="nmC-P3-7ti" id="fOf-jQ-Wyt"/>
+                <outlet property="postTitleLabel" destination="w3j-sc-XnN" id="twK-Ln-SQc"/>
+                <outlet property="postUsernameLabel" destination="Kta-rc-p3u" id="D0y-Mw-Q5L"/>
+            </connections>
+            <point key="canvasLocation" x="-307.24637681159425" y="101.78571428571428"/>
+        </tableViewCell>
+    </objects>
+</document>

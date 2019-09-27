@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="MessageTextFieldTableViewCell" customModule="FMail" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DEc-Ic-bes">
+                        <rect key="frame" x="12" y="12" width="70" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="70" id="QBT-PL-Skt"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="17"/>
+                        <color key="textColor" red="0.19215686269999999" green="0.2470588235" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mgp-VV-nMF">
+                        <rect key="frame" x="94" y="5" width="214" height="34"/>
+                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="Mgp-VV-nMF" secondAttribute="trailing" constant="12" id="1IT-Ki-vge"/>
+                    <constraint firstItem="Mgp-VV-nMF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="1tJ-lg-GAs"/>
+                    <constraint firstAttribute="bottom" secondItem="Mgp-VV-nMF" secondAttribute="bottom" constant="5" id="Gfi-jD-HM2"/>
+                    <constraint firstItem="DEc-Ic-bes" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="Ibb-7P-L4z"/>
+                    <constraint firstItem="Mgp-VV-nMF" firstAttribute="leading" secondItem="DEc-Ic-bes" secondAttribute="trailing" constant="12" id="QXI-4A-LXD"/>
+                    <constraint firstItem="DEc-Ic-bes" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="f0b-U3-HsX"/>
+                    <constraint firstAttribute="bottom" secondItem="DEc-Ic-bes" secondAttribute="bottom" constant="12" id="yPp-mk-sVK"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="messageTextField" destination="Mgp-VV-nMF" id="sh4-Pi-UD1"/>
+                <outlet property="messageTitleLabel" destination="DEc-Ic-bes" id="fn0-Ak-TCJ"/>
+            </connections>
+            <point key="canvasLocation" x="-184.05797101449278" y="128.57142857142856"/>
+        </tableViewCell>
+    </objects>
+</document>
