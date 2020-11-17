@@ -31,12 +31,6 @@ class SideMenuTableViewController: UITableViewController {
         guard let menu = navigationController as? UISideMenuNavigationController, menu.blurEffectStyle == nil else {
             return
         }
-        
-        // Set up a cool background image for demo purposes
-        /*let imageView = UIImageView(image: #imageLiteral(resourceName: "saturn"))
-         imageView.contentMode = .scaleAspectFit
-        imageView.backgroundColor = UIColor.black.withAlphaComponent(0.2)
-        tableView.backgroundView = imageView*/
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -157,8 +151,7 @@ class SideMenuTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.section {
 
-        case 2:
-            
+        case 2:            
             switch indexPath.row {
             case 0:
                 let vc = PresentedViewController()

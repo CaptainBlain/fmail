@@ -10,8 +10,8 @@ import Foundation
 
 class Constant {
     
-    //static let apiUrl = "http://192.168.60.215:4000";
-    static let apiUrl = "http://192.168.1.43:4000";
+    static let apiUrl = "https://fmail-test.herokuapp.com";
+    //static let apiUrl = "http://192.168.1.43:4000";
     //static let apiUrl = "https://agile-cove-88871.herokuapp.com";
 }
 

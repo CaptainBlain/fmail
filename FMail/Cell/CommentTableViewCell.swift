@@ -8,11 +8,16 @@
 
 import UIKit
 
+protocol CommentTableViewCellDelegate: AnyObject {
+    func commentTableViewCelllDidPressReply(forComment comment: Comment)
+}
 class CommentTableViewCell: UITableViewCell {
 
     public static let identifier = "CommentTableViewCellIdentifier"
     
     var comment: Comment!
+    
+    var delegate: CommentTableViewCellDelegate?
     
     @IBOutlet weak var commentFromLabel: UILabel!
     @IBOutlet weak var commentFromLabelHeightConstraint: NSLayoutConstraint!
@@ -34,6 +39,8 @@ class CommentTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        self.selectionStyle = .none
         
         commentFromLabel.text = ""
         commentSentLabel.text = ""
@@ -137,5 +144,11 @@ class CommentTableViewCell: UITableViewCell {
             
         }
     }
+    
+    @IBAction func didPressReplyButton(_ sender: Any) {
+            if let comment = comment {
+               self.delegate?.commentTableViewCelllDidPressReply(forComment: comment)
+           }
+       }
     
 }

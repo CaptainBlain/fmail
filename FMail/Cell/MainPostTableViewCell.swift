@@ -32,6 +32,8 @@ class MainPostTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         
+        self.selectionStyle = .none
+        
         /*postTitleLabel.backgroundColor = UIColor.red
         postUsernameLabel.backgroundColor = UIColor.blue
         postContentLabel.backgroundColor = UIColor.yellow

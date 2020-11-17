@@ -51,9 +51,6 @@ class PostViewController: UIViewController {
         let closeButton = UIBarButtonItem(image: UIImage(named: "back")?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate), style: UIBarButtonItem.Style.plain, target: self, action: #selector(PostViewController.close(sender:)))
         closeButton.tintColor = UIColor.white
         self.navigationItem.leftBarButtonItem = closeButton
-        /*let sendButton = UIBarButtonItem(title: "Send", style: UIBarButtonItem.Style.plain, target: self, action: #selector(NewMessageViewController.send(sender:)))
-        sendButton.tintColor = UIColor.white
-        self.navigationItem.rightBarButtonItem = sendButton*/
         
         getComments()
     }
@@ -133,15 +130,28 @@ extension PostViewController: UITableViewDataSource {
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: CommentTableViewCell.identifier, for: indexPath) as! CommentTableViewCell
             cell.comment = comments[indexPath.section-1]
+            cell.delegate = self
             return cell
         }
-        
+
     }
     
 }
 
 extension PostViewController: UITableViewDelegate {
     
+}
+
+extension PostViewController: CommentTableViewCellDelegate {
+    func commentTableViewCelllDidPressReply(forComment comment: Comment) {
+        let vc = NewMessageViewController()
+        vc.delegate = self
+        vc.comment = comment
+        let navCon = UINavigationController(rootViewController: vc)
+        self.present(navCon, animated: true) {
+            
+        }
+    }
 }
 
 extension PostViewController: MainPostTableViewCellDelegate {
@@ -187,7 +197,8 @@ extension PostViewController {
             }
             
             if let comments = comments {
-                self.comments = comments                
+                self.comments = comments
+                
                 self.tableView.reloadData()
             }
         }
